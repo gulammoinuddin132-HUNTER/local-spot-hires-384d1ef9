@@ -32,16 +32,19 @@ const Landing = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 gradient-hero text-white">
-        <div className="container mx-auto text-center">
+      <section className="pt-32 pb-20 px-4 gradient-hero text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 animate-wave">
+          <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20" />
+        </div>
+        <div className="container mx-auto text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
             Find Local Work,<br />Hire Skilled Help
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Connect small businesses with talented professionals and job seekers for short-term opportunities
+            Empowering Small Businesses and Local Talent
           </p>
           <Link to="/auth">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6 bg-white/20 hover:bg-white/30 backdrop-blur-md">
+            <Button size="lg" className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90 shadow-accent">
               Get Started <ArrowRight className="ml-2" />
             </Button>
           </Link>

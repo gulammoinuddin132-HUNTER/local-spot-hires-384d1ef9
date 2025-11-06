@@ -77,11 +77,7 @@ const PostJob = () => {
 
       if (error) throw error;
 
-      toast({
-        title: 'Success!',
-        description: 'Your job has been posted',
-      });
-      navigate('/my-jobs');
+      navigate('/job-success');
     } catch (error: any) {
       toast({
         title: 'Error',

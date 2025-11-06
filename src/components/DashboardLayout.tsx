@@ -4,8 +4,10 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Button } from './ui/button';
 import { 
   Briefcase, LogOut, User, Briefcase as JobIcon, 
-  Search, Users, FileText, Home
+  Search, Users, FileText, Home, Bell
 } from 'lucide-react';
+import { Notifications } from './Notifications';
+import { FeedbackModal } from './FeedbackModal';
 import {
   Sidebar,
   SidebarContent,
@@ -120,6 +122,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b bg-card px-4 shadow-sm">
             <SidebarTrigger />
             <h1 className="text-2xl font-semibold">QuickHire</h1>
+            <div className="ml-auto flex items-center gap-2">
+              <FeedbackModal />
+              <Notifications />
+            </div>
           </header>
           <div className="p-6">
             {children}

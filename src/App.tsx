@@ -9,6 +9,11 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import Jobs from "./pages/Jobs";
 import PostJob from "./pages/PostJob";
+import Profile from "./pages/Profile";
+import Professionals from "./pages/Professionals";
+import JobSuccess from "./pages/JobSuccess";
+import MyJobs from "./pages/MyJobs";
+import MyApplications from "./pages/MyApplications";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +59,11 @@ const App = () => (
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="/jobs" element={<ProtectedRoute><Jobs /></ProtectedRoute>} />
             <Route path="/post-job" element={<ProtectedRoute><PostJob /></ProtectedRoute>} />
+            <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+            <Route path="/professionals" element={<ProtectedRoute><Professionals /></ProtectedRoute>} />
+            <Route path="/job-success" element={<ProtectedRoute><JobSuccess /></ProtectedRoute>} />
+            <Route path="/my-jobs" element={<ProtectedRoute><MyJobs /></ProtectedRoute>} />
+            <Route path="/my-applications" element={<ProtectedRoute><MyApplications /></ProtectedRoute>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
